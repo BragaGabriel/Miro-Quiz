@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 11</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Quando o e-Sports ficou popular no Brasil?</h2>
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Opção 1</li>
+            <li onclick="verificarResposta('Opção 2')">Opção 2</li>
+            <li onclick="verificarResposta('Opção 3')">Opção 3</li>
+        </ul>
+    </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h2>Explicação</h2>
+                <p> Porque sim e fim :P</p>
+                <img src="" alt="">
+                <a href="#" onclick="fecharModal()">Fechar</a>
+            </div>
+        </div>
+    
+        <script>
+        const modal = document.getElementById('modal');
+
+        function verificarResposta(respostaSelecionada) {
+            if (respostaSelecionada === 'Resposta Correta') {
+                alert('Parabéns!! Resposta Correta!!');
+            } else {
+            modal.style.display = 'flex';
+        }
+    }
+
+        function fecharModal() {
+            modal.style.display = 'none';
+        }
+
+        </script>
+</body>
+</html>
