@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 1</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Qual o primeiro console de videogame criado?</h2>
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Atari</li>
+            <li onclick="verificarResposta('Opção 2')">Odissey</li>
+            <li onclick="verificarResposta('Opção 3')">NES (Nintendo Entertainment System)</li>
+        </ul>
+    </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h2>Explicação</h2>
+                <p><b>Errado!</b> O primeiro console foi criado em 1972 pela Magnavox, tente novamente!</p>
+                <img src="" alt="">
+                <a href="#" onclick="fecharModal()">Fechar</a>
+            </div>
+        </div>
+    
+        <script>
+        const modal = document.getElementById('modal');
+        
+        function verificarResposta(respostaSelecionada) {
+            if (respostaSelecionada === 'Opção 2') {
+                alert('Parabéns!! Resposta Correta!!');
+            } else {
+            modal.style.display = 'flex';
+        }
+    }
+
+        function fecharModal() {
+            modal.style.display = 'none';
+        }
+
+        </script>
+</body>
+</html>
