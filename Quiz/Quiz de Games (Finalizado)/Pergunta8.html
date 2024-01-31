@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 8</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Qual é o jogo de Luta Super Nintendo mais conhecido?</h2>
+        <img src="https://cdn.ligadosgames.com/imagens/melhores-jogos-super-nintendo-og.jpg" alt="fighto">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Street Fighter 2</li>
+            <li onclick="verificarResposta('Opção 2')">Melty Blood</li>
+            <li onclick="verificarResposta('Opção 3')">Ultimate Mortal Kombat 3</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">O Ultimate no nome sugere que essa versão era a mais completa de todas. E era: no Super Nintendo era o Mortal Kombat com o maior número de lutadores de todos. Em termos gráficos era bem desenhado</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 3') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta9.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'O Ultimate no nome sugere que essa versão era a mais completa de todas. E era: no Super Nintendo era o Mortal Kombat com o maior número de lutadores de todos. Em termos gráficos era bem desenhado');
+        }
+    }
+}
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta9.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

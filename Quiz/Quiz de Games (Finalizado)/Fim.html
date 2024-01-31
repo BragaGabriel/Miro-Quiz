@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fim do Quiz</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: url(https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711&dl=1);
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #container {
+            background-color: #343a91ee;
+            border-radius: 26px;
+            padding: 20px;
+            margin: 50px auto;
+            box-shadow: 0 0 60px purple;
+            max-width: 600px;
+            border: 5px solid #5d81b18e;
+            text-align: center; 
+        }
+
+        #comecar-btn {
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px; 
+            display: block; 
+            margin: 0 auto; 
+        }
+
+        #comecar-btn:hover {
+            background-color: #2e6c31;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+        img {
+            width: 50%;
+            border-radius: 20px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Parabéns! Você completou o Jogo de Perguntas!</h1>
+        <img src="https://media1.giphy.com/media/T87BZ7cyOH7TwDBgwy/giphy.gif">
+        <p>Clique em "Jogar Novamente" para reiniciar o jogo.</p>
+        <button id="comecar-btn" onclick="jogarNovamente()">Jogar Novamente?</button>
+    </div>
+
+    <script>
+        function jogarNovamente() {
+            window.location.href = 'pergunta1.html'; 
+        }
+    </script>
+
+</body>
+</html>

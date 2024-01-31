@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 6</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Quantos títulos a franquia Castlevania possuí até os dias de hoje?</h2>
+        <img src="https://tm.ibxk.com.br/2023/10/06/06013527073019.jpg" alt="Castlevania">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">30</li>
+            <li onclick="verificarResposta('Opção 2')">25</li>
+            <li onclick="verificarResposta('Opção 3')">33</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">Muitos títulos de Castlevania foram lançados para os mercados do Japão, América do Norte, Europa, e Austrália, em vários consoles, PC e plataformas móveis, com remakes adicionais e relançamentos.[1] O primeiro título de console, Castlevania (1986), foi lançado no Japão para Famicom Disk System em 1986 e na América do Norte para NES em 1987,[2] apresentando gráficos 2D e gênero de ação, além de algumas das principais características que a série viria a reutilizar. Atualmente temos 33 títulos da franquia Castlevania sem contar com as animações mais recentes</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 3') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta7.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'Muitos títulos de Castlevania foram lançados para os mercados do Japão, América do Norte, Europa, e Austrália, em vários consoles, PC e plataformas móveis, com remakes adicionais e relançamentos.[1] O primeiro título de console, Castlevania (1986), foi lançado no Japão para Famicom Disk System em 1986 e na América do Norte para NES em 1987,[2] apresentando gráficos 2D e gênero de ação, além de algumas das principais características que a série viria a reutilizar. Atualmente temos 33 títulos da franquia Castlevania sem contar com as animações mais recentes');
+        }
+    }
+}
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta7.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 5</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Quais jogos do Super Nintendo eram populares?</h2>
+        <img src="https://s2-techtudo.glbimg.com/NqGRKbT2EQdcRmO31CCWLQ6Fql0=/0x0:695x391/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/A/V/mmDQgKQiC7sdFK74pqjQ/supernintendo.jpg" alt="NIntendo">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Donkey Kong / Zelda</li>
+            <li onclick="verificarResposta('Opção 2')">Sonic / Alladin</li>
+            <li onclick="verificarResposta('Opção 3')">Driver / GTA 1</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">Com quase 800 jogos lançados, o Super Nintendo teve muitos títulos aclamados, com 20 milhões de cópias para o mais vendido do console</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 1') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta6.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'Com quase 800 jogos lançados, o Super Nintendo teve muitos títulos aclamados, com 20 milhões de cópias para o mais vendido do console');
+        }
+    }
+}
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta6.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

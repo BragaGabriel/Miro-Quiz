@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 7</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Quais são os consoles mais famosos no anos 90?</h2>
+        <img src="https://cultura.uol.com.br/upload/tvcultura/entretenimento/20210630183106_capa-site-64.jpg" alt="Conlidoo">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Super Nintendo, PlayStation, Steam Deck e Nintendo 3DS</li>
+            <li onclick="verificarResposta('Opção 2')">Super Nintendo, Mega Drive, PlayStation 1 e Nintendo 64</li>
+            <li onclick="verificarResposta('Opção 3')">Nintendo DS, Mega Drive, Playstation e Xbox 360</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">Consoles como o Super Nintendo, Mega Drive, PlayStation 1 e Nintendo 64, além do PC, foram plataformas revolucionárias e guardam verdadeira pérolas dos mais diversos gêneros, ao passo que as máquinas de fliperama ajudavam a democratizar o acesso aos games por poucos centavos</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 2') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta8.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'Consoles como o Super Nintendo, Mega Drive, PlayStation 1 e Nintendo 64, além do PC, foram plataformas revolucionárias e guardam verdadeira pérolas dos mais diversos gêneros, ao passo que as máquinas de fliperama ajudavam a democratizar o acesso aos games por poucos centavos');
+        }
+    }
+}
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta8.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

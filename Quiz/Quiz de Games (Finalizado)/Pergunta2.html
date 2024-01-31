@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 2</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Qual é a empresa pioneira dos jogos de videogame?</h2>
+        <img src="https://f.i.uol.com.br/fotografia/2023/04/20/16820387716441dff336782_1682038771_16x9_md.jpg" alt="Empressa">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Atari</li>
+            <li onclick="verificarResposta('Opção 2')">Sega</li>
+            <li onclick="verificarResposta('Opção 3')">Nintendo</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">A Atari foi fundada em 1972 por Nolan Bushnell e Ted Dabney, nos Estados Unidos. A marca, que se tornou pioneira do mercado de consoles de videogame domésticos e jogos eletrônicos, teve vários donos ao longo de sua história</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 1') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta3.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'A Atari foi fundada em 1972 por Nolan Bushnell e Ted Dabney, nos Estados Unidos. A marca, que se tornou pioneira do mercado de consoles de videogame domésticos e jogos eletrônicos, teve vários donos ao longo de sua história');
+        }
+    }
+}
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta3.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

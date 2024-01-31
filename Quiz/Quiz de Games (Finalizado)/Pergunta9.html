@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 9</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Quais é o jogo mais vendido do MegaDrive?</h2>
+        <img src="https://criticalhits.com.br/wp-content/uploads/2022/06/2016-01-25-altered-beast-genesis-e1656086674685.jpg" alt="megadrive">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Earthworm Jim</li>
+            <li onclick="verificarResposta('Opção 2')">Sonic the Hedgehog</li>
+            <li onclick="verificarResposta('Opção 3')">Castlevania Bloodlines</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">O jogo mais vendido de todos os tempos nesta plataforma foi Sonic the Hedgehog, com mais de 15 milhões de unidades vendidas, se tornando também um dos jogos mais vendidos de todos os tempos</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 2') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta10.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'O jogo mais vendido de todos os tempos nesta plataforma foi Sonic the Hedgehog, com mais de 15 milhões de unidades vendidas, se tornando também um dos jogos mais vendidos de todos os tempos');
+        }
+    }
+}
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta10.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

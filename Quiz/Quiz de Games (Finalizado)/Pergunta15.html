@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 15</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Qual console mais desejado atualmente?</h2>
+        <img src="https://t2.tudocdn.net/607940?w=824&h=494" alt="MMORPG">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Playstation 5</li>
+            <li onclick="verificarResposta('Opção 2')">Nintendo Switch</li>
+            <li onclick="verificarResposta('Opção 3')">XBOX Series S</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">O Nintendo Switch é o console Nº1 e o console mais desejado em 51 países. O Xbox Series S, a versão simplificada do Xbox Series X, mais potente, está em segundo lugar na classificação global, ocupando o primeiro lugar em 38 países, incluindo Argentina, Brasil, Colômbia, México, Paraguai e Uruguai</p>
+            <button onclick="proximoJogo()">Finalizar</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 2') {
+        alert('Parabéns!! Você concluiu o jogo!!');
+        window.location.href = 'Fim.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'O Nintendo Switch é o console Nº1 e o console mais desejado em 51 países. O Xbox Series S, a versão simplificada do Xbox Series X, mais potente, está em segundo lugar na classificação global, ocupando o primeiro lugar em 38 países, incluindo Argentina, Brasil, Colômbia, México, Paraguai e Uruguai');
+        }
+    }
+}
+
+
+        function proximoJogo() {
+            window.location.href = 'Fim.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

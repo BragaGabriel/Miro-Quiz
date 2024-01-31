@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 10</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Qual foi o ano de lançamento do Super Mario Bros?</h2>
+        <img src="https://jpimg.com.br/uploads/2017/09/gammasquadsupermarioff1.jpg" alt=mariotepegouatrasdoarmario">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">1985</li>
+            <li onclick="verificarResposta('Opção 2')">1979</li>
+            <li onclick="verificarResposta('Opção 3')">1992</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">Mario aparece pela primeira vez como “Jumpman” no jogo “Donkey Kong”, no qual ele precisa salvar sua namorada “Pauline” do gorila. Originalmente, ele era carpinteiro. No entanto, ao entrar nos canos em seu próprio jogo, “Mario Bros”, passou a ser considerado um encanador</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 1') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta11.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'Mario aparece pela primeira vez como “Jumpman” no jogo “Donkey Kong”, no qual ele precisa salvar sua namorada “Pauline” do gorila. Originalmente, ele era carpinteiro. No entanto, ao entrar nos canos em seu próprio jogo, “Mario Bros”, passou a ser considerado um encanador');
+        }
+    }
+}
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta11.html';
+        }
+    </script>
+
+</body>
+</html>

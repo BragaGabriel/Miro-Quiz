@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 13</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Qual o melhor jogo do Playstation considerado atualmente?</h2>
+        <img src="https://t.ctcdn.com.br/g1jOy_-GUWnZkbQxYTEN2rV-mqE=/1980x1114/smart/i569020.png" alt="PS5">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">The Last of Us Part II</li>
+            <li onclick="verificarResposta('Opção 2')">Fortnite</li>
+            <li onclick="verificarResposta('Opção 3')">Final Fantasy XVI</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">TLOUII foi considerado pelo fãs como o melhor jogo da atualidade até ser outros títulos começaram a substituir o título</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 1') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta14.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'TLOUII foi considerado pelo fãs como o melhor jogo da atualidade até ser outros títulos começaram a substituir o título');
+        }
+    }
+}
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta14.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERGUNTA 12</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <div id="pergunta">
+        <h2>Quais são os MMORPGs mais jogados no mundo atualmente?</h2>
+        <img src="https://cdn.ligadosgames.com/imagens/the-lord-of-the-rings-online-0-cke.jpg" alt="MMORPG">
+        <ul>
+            <li onclick="verificarResposta('Opção 1')">Lost Ark e Albion Online</li>
+            <li onclick="verificarResposta('Opção 2')">Diablo Immortal e The Elder Scrolls Online</li>
+            <li onclick="verificarResposta('Opção 3')">World of Warcraft e Final Fantasy XIV</li>
+        </ul>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Explicação</h2>
+            <p id="modal-texto">WoW e FFXIV foram os melhores jogos de MMORPG que atraiu milhares de jogadores. Cada um aborda diversas mecânicas, mas pode se dizer que os dois ainda brigam no pedestral dos melhores MMORPGS da atualidade</p>
+            <button onclick="proximoJogo()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalTexto = document.getElementById('modal-texto');
+
+        function exibirModal(titulo, texto) {
+            modalTitulo.textContent = titulo;
+            modalTexto.textContent = texto;
+            modal.style.display = 'flex';
+        }
+        
+        function verificarResposta(respostaSelecionada) {
+    if (respostaSelecionada === 'Opção 3') {
+        alert('Parabéns!! Você acertou!!');
+        window.location.href = 'Pergunta13.html';
+    } else {
+        const confirmacao = confirm('Ops, resposta incorreta! Deseja ver a explicação?');
+        if (confirmacao) {
+            exibirModal('Explicação', 'WoW e FFXIV foram os melhores jogos de MMORPG que atraiu milhares de jogadores. Cada um aborda diversas mecânicas, mas pode se dizer que os dois ainda brigam no pedestral dos melhores MMORPGS da atualidade');
+        }
+    }
+}
+
+
+        function proximoJogo() {
+            window.location.href = 'Pergunta13.html';
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>
